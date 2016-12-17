@@ -1,6 +1,6 @@
 # NFL Arrests App
 
-This project is our IT490 (Systems Integration) Site. 
+This project is my IT490 (Systems Integration) Site. 
 It shows NFL Arrest data for every active/inactive player in the league.
 
 ## Getting Started
@@ -15,12 +15,16 @@ Just git clone the repository and run a composer install then do a million other
 What things you need to install the software and how to install them
 
 ```
-sudo rm -Rf *
+An installed, configured, and running virtual machine. 
+
+**Preferably Ubuntu 16.04 but any Linux distro will work**
+
+Time - lots and lots of time...
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you how to get a development env running
 
 ```
 git clone git@github.com:IT490/Football_Project.git football_project
@@ -29,9 +33,15 @@ cd football_project
 
 composer install
 ```
-Then move the entire directory structure and files into /var/www/football
+Once you have the repo cloned onto your local disk, you must
 
-And 
+then move the entire directory structure and files into /var/www/football_site:
+
+```
+sudo mv ~/football_project /var/www/football_site
+
+```
+Now, you need to set up Apache to recognize the site as available and enabled. 
 
 ```
 cd /etc/apache2/sites-available
@@ -40,6 +50,7 @@ sudo cp 000-default.conf 001-project.conf
 
 sudo vim 001-project.conf
 ```
+
 Then change the Apache config file so that it points to your football directory in /var/www/football_project/
 
 After this is done
