@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-amqplib/thumper": "^0.5.0",
+        "mongodb/mongodb": "^1.0.0"
+    }
+}

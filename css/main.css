@@ -1,0 +1,56 @@
+.main-div { 
+  width: 100%;
+  margin-top: 40px;
+  margin-left : 20px;
+  margin-right: 60px;
+}
+
+.draftContainer {
+  text-align: center;
+  width: 100%;
+}
+
+body {
+  padding-bottom: 70px;
+  padding-top: 20px;
+}
+
+#left {
+  float: left;
+  height: 700px;
+  width: 220px;
+  margin: 5px;
+  background-color: red;
+  border-right: solid #0F0F0F
+}
+
+#center {
+  display: inline-block;
+  background-color: blue;
+  margin: 0 auto;
+  width: calc(100% - 460px);
+  height: 700px;
+}
+
+#right {
+  float: right;
+  background-color: green;
+  margin: 5px;
+  width: 220px;
+  height: 700px;
+  border-left: solid #0F0F0F
+}
+
+.big-font {
+  font-size: 32px;
+}
+
+.ccl {
+  padding-top: 175px;
+  padding-right: 45px;
+}
+
+.ccr {
+  padding-top: 175px;
+  padding-left: 45px;
+}
