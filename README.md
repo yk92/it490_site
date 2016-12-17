@@ -43,6 +43,7 @@ sudo mv ~/football_project /var/www/football_site
 ```
 Now, you need to set up Apache to recognize the site as available and enabled. 
 
+*** [ A demo apache .conf file will be added to this repository ]
 ```
 cd /etc/apache2/sites-available
 
@@ -50,34 +51,37 @@ sudo cp 000-default.conf 001-project.conf
 
 sudo vim 001-project.conf
 ```
+Now that you have an apache conf file, change the file so that it points 
+to your football directory in /var/www/football_project/. [ Look at demo file ]
 
-Then change the Apache config file so that it points to your football directory in /var/www/football_project/
-
-After this is done
+After this is done create a sym link in sites-enabled:
 
 ```
 cd ../sites-enabled
 
 sudo ln -s ../sites-available/001-project.conf
 ```
+If you are running on a VM (as is recommended) you now need to edit your /etc/hosts file
+to allow your new apache .conf to "exist" on the web
 
-Then troubleshoot for a month and it works!
+*** [ This configuration still needs to be added to the README ]
 
 ## Running the tests
 
-Tests... Ha! We laugh at testing. (We really dont)
 
 ## Deployment
 
 To deploy on your system you must configure Apache sites-enabled and sites-available files
 as well as create a directory structure similar to the repo in /var/www/
 
+Then edit the /etc/hosts file and cycle your network connection so Linux picks up /etc/hosts changes
+
 ## Built With
 
-* Custom-built MVC Framework - The web framework used
+* Custom-built MVC Framework - I created a simple MVC-Light "framework"
 * [Composer](https://www.composer.com) - Dependency Management
-* [NFL Arrests](https://www.nflarrests.com/api/) - Used to gather Arrest data
-* [NFL Player Data](http://developer.fantasydata.com/docs) - Used for Player data
+* [NFL Arrests](https://www.nflarrests.com/api/) - API Used to gather Arrest data
+* [NFL Player Data](http://developer.fantasydata.com/docs) - API Used for Player data
 * [Github](http://www.github.com) - Used for source control
 * [Bootstrap](http://www.bootstrap.com) - Used for CSS Styling
 * [Love](http://www.google.com)
@@ -90,7 +94,6 @@ This is currently version 1.0
 ## Authors
 
 * **Branden Robinson** - *Player List, Start/Sit, RabbitMQ Integration, Newsriver Integration, and Site Re-Design* - [Branden Github](https://github.com/br66)
-* **Jason Sevilla** - *Cron scripts, Wireframing* - [Jason Github](https://github.com/js296)
 * **Yuval Klein** - *MVC Framework abstracts, Arrest integration, Login, Signup, Weekly Rankings, RabbitMQ Integration* - [Yuval Github](https://github.com/yk92)
 
 ## License
@@ -102,8 +105,6 @@ This project is licensed under the MIT License
 * MunchiesNJ (god those burgers are good)
 * Annabella's Kitchen patty melt
 * Honey Mustard
-* Mr. DJ Kehoe for making us do the stupid carousel
-* Inspiration - Sometimes
-* etc - yes, lots of etc. That guy was clutch
-* Bootstrap 
+* Prof. Chaos (DJ Kehoe) for making us do the stupid carousel
+* Inspiration - On a good day
 
