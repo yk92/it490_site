@@ -93,8 +93,8 @@ This is currently version 1.0
 
 ## Authors
 
-* **Branden Robinson** - *Player List, Start/Sit, RabbitMQ Integration, Newsriver Integration, and Site Re-Design* - [Branden Github](https://github.com/br66)
-* **Yuval Klein** - *MVC Framework abstracts, Arrest integration, Login, Signup, Weekly Rankings, RabbitMQ Integration* - [Yuval Github](https://github.com/yk92)
+* **Branden Robinson** - *Player List, Start/Sit View - [Branden Github](https://github.com/br66)
+* **Yuval Klein** - *MVC Framework abstracts, Arrest integration, Login, Signup, Weekly Rankings, Models, RabbitMQ Integration, RPC Servers, custom Thumper classes, index.php * - [Yuval Github](https://github.com/yk92)
 
 ## License
 
